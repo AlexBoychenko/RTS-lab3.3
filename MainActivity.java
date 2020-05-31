@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    long startTime = System.currentTimeMillis();
+    
     public static int a;
     public static int b;
     public static int c;
@@ -183,9 +183,5 @@ public class MainActivity extends AppCompatActivity {
         double bestMutation = 0.05 + ((double)counter)/100;
         x1res.setText(Double.toString(bestMutation));
         genNum.setText(Integer.toString(min));
-    }
-    long time = System.currentTimeMillis() - startTime;
-    if (time > 1000) {
-        System.exit(0);
     }
 }
