@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    
+    long startTime = System.currentTimeMillis();
     public static int a;
     public static int b;
     public static int c;
@@ -152,6 +152,10 @@ public class MainActivity extends AppCompatActivity {
             generationNumber++;
         }
         return generationNumber;
+    }
+    long time = System.currentTimeMillis() - startTime;
+    if (time > 1000) {
+        System.exit(0);
     }
     public void onButton(View v){
         EditText numA = (EditText)findViewById(R.id.numA);
